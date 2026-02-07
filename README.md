@@ -1,6 +1,12 @@
 # mdbook-assets-hash
+[![Latest Version](https://img.shields.io/crates/v/mdbook-assets-hash.svg)](https://crates.io/crates/mdbook-assets-hash)
+
+> ⚠️ Disclaimer  
+> Mostly one-shotted with Claude Code. Works for me.
 
 An [mdBook](https://rust-lang.github.io/mdBook/) preprocessor that adds content-based cache-busting hashes to asset filenames.
+
+See [hotpath.rs](https://hotpath.rs) for a live demo. 
 
 Assets are opted in explicitly using the `{{#asset-hash path}}` directive. The preprocessor computes an MD5 hash of each referenced file, copies it with a hashed filename (e.g., `image.png` → `image.a1b2c3d4.png`), replaces the directive with the hashed path, and writes an `assets-manifest.json` to the book root.
 
