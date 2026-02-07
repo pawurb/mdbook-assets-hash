@@ -6,7 +6,7 @@ use mdbook_preprocessor::{
 };
 use regex::Regex;
 use serde::{Deserialize, Serialize};
-use std::collections::HashMap;
+use std::collections::BTreeMap;
 use std::fs;
 use std::path::{Component, Path, PathBuf};
 use std::sync::LazyLock;
@@ -22,7 +22,7 @@ pub struct ManifestEntry {
     pub hashed_path: String,
 }
 
-pub type Manifest = HashMap<String, ManifestEntry>;
+pub type Manifest = BTreeMap<String, ManifestEntry>;
 
 #[derive(Default)]
 pub struct AssetsHash;

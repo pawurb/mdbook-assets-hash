@@ -1,6 +1,6 @@
 [package]
 name = "mdbook-assets-hash"
-version = "0.1.0"
+version = "0.1.1"
 edition = "2024"
 description = "mdbook preprocessor that adds content-based cache-busting hashes to asset filenames."
 license = "MIT"
