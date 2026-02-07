@@ -1,0 +1,27 @@
+[package]
+name = "mdbook-assets-hash"
+version = "0.1.0"
+edition = "2024"
+description = "mdbook preprocessor that adds content-based cache-busting hashes to asset filenames."
+license = "MIT"
+readme = "./README.md"
+repository = "https://github.com/pawurb/mdbook-assets-hash"
+categories = ["development-tools"]
+
+[[bin]]
+name = "mdbook-assets-hash"
+path = "src/main.rs"
+
+[dependencies]
+clap = "4.5"
+mdbook-preprocessor = "0.5"
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+regex = "1"
+md-5 = "0.10"
+
+[dev-dependencies]
+tempfile = "3"
+
+[profile.release]
+lto = true
